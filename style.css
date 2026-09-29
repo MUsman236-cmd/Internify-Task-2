@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+  color: #1e3a8a;
+  text-align: center;
+}
+
+body > h1 {
+  margin-top: 50px;
+  font-size: 40px;
+  color: #0f172a;
+}
+
+body > p {
+  margin-top: 10px;
+  color: #475569;
+  font-size: 18px;
+}
+
+.toggle,
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 30px auto 20px;
+  flex-wrap: wrap;
+}
+
+.toggle button,
+.filter button {
+  padding: 12px 22px;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #1e3a8a;
+  background-color: #f8fbff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.04);
+}
+
+.toggle button:hover,
+.filter button:hover,
+.toggle button.active,
+.filter button.active {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.18);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.card-basic,
+.card-premium {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  padding: 30px 24px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-basic::before,
+.card-premium::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #2563eb;
+}
+
+.card-basic:hover,
+.card-premium:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
+}
+
+.card-premium {
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+  border: 1px solid #dbeafe;
+  transform: scale(1.02);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card-basic h2,
+.card-premium h2 {
+  margin-bottom: 12px;
+  color: #0f172a;
+  text-transform: capitalize;
+  font-size: 28px;
+}
+
+.card-basic p,
+.card-premium p {
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.price {
+  margin: 18px 0;
+  font-size: 38px;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.card-basic ul,
+.card-premium ul {
+  list-style: none;
+  margin: 20px 0 30px;
+  text-align: left;
+}
+
+.card-basic li,
+.card-premium li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: #334155;
+  font-size: 15px;
+}
+
+.card-basic li::before,
+.card-premium li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.card-basic button,
+.card-premium button {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.card-basic button:hover,
+.card-premium button:hover {
+  opacity: 0.92;
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .card-premium {
+    transform: none;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pricing plan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Our Pricing Plans   </h1>
+    <p>chose the perfect plan for your needs</p>
+    <div class="toggle">
+        <button id="monthlybtn">Monthly</button>
+        <button id="yearlybtn">Yearly</button>
+
+    </div>
+    <div class="filter">
+        <button id="allbtn">All</button>
+        <button id="basicbtn">Basic</button>
+        <button id="premiumbtn">Premium</button>
+    </div>
+    <div class="card-container">
+        <div class="card-basic">
+            <h2>basic</h2>
+            <p>perfect for beginners and small projects</p>
+            <h3 class="price" data-monthly="10" data-yearly="100">$10</h3>
+            <ul>
+                <li>5 projects</li>
+                <li>10GB storage</li>
+                <li>basic support</li>
+            </ul>
+            <button>Get started</button>
+        </div>
+        <div class="card-premium">
+            <span class="popular-badge">Most Popular</span>
+            <h2>premium</h2>
+            <p>perfect for growing businesses and large projects</p>
+            <h3 class="price" data-monthly="30" data-yearly="300">$30</h3>  
+            <ul>
+                <li>Unlimited projects</li>
+                <li>100GB storage</li>
+                <li>priority support</li>
+            </ul>
+            <button>Get started</button>
+        </div>
+        <div class="card-premium">
+            <h2>Business plan</h2>
+            <p>perfect for large enterprises and complex needs</p>
+            <h3 class="price" data-monthly="100" data-yearly="1000">$100</h3>
+            <ul>
+                <li>Unlimited projects</li>
+                <li>1TB storage</li>
+                <li>24/7 dedicated support</li>
+            </ul>
+            <button>Get started</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
